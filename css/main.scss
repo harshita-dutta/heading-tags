@@ -1,0 +1,210 @@
+:root{
+    --p1: rgb(146, 199, 195);
+    --p2: rgb(5, 122, 124);
+    
+}
+
+
+@mixin design{
+            color:rgb(54, 126, 110);
+            background-color: rgb(203, 243, 224);
+            
+            transition: color 1s;
+            transition: background-color 1s;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(71, 126, 118);
+                    color: rgb(241, 255, 254);
+                }
+}
+
+
+body{
+    margin: 0;
+    header{
+        margin-top: -1em;
+        margin-left: -0.5em;
+        
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        text-align: center;
+        background: linear-gradient(180deg, var(--p1), rgb(241, 255, 254));
+
+
+        p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 2.5em;
+            color: rgb(62, 126, 131);
+            font-weight: 600;
+        }
+ 
+    }
+
+    #hero{
+        margin-top: -0.3em;
+        background-color: rgb(241, 255, 254);
+        padding-top: 2em;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+            
+        
+        &:hover{
+            cursor: default;
+        }
+
+
+        #pre{
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto auto;
+            
+            .question{
+                color: rgb(85, 51, 10);
+            }
+            .instruction-1{
+                font-style: normal;
+                font-family: cursive;
+                color: rgb(122, 90, 51);
+            }
+            
+        }
+
+        form{
+            text-align: center;
+            
+            input{
+                border: 2px solid black;
+                background: linear-gradient(90deg, rgb(171, 210, 212), rgb(241, 255, 254),rgb(171, 210, 212) );
+                width: 50%;
+               
+                color: rgb(81, 116, 104);
+                padding: 2em 1em 1em 1em;
+                font-size: 23px;
+                font-family: monospace;
+                text-align: center;
+                outline: none;
+                word-wrap: break-word;
+                word-break: break-all;
+                
+            }
+            
+        }
+
+        .instruction-2{
+            font-size: 40px;
+            font-style: normal;
+            font-family: cursive;
+            color: rgb(122, 90, 51);
+        }
+
+        .instruction-3{
+            color: rgb(85, 51, 10)
+        }
+
+        #post{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+
+            img{
+                width: 50px;
+                height: 60px;
+                animation: moveArrow 1s alternate-reverse infinite;
+                margin-top: 1em;
+                padding-bottom: 2em;
+                
+            }
+        }
+   
+    }
+
+    .display{
+        background-color: rgb(241, 255, 254);
+        margin-top: -1em;
+        
+        
+        
+
+        #lines{
+            text-align: center;
+            font-size: 35px;
+            font-family: cursive;
+            background: linear-gradient(180deg,rgb(241, 255, 254), var(--p1), var(--p1), rgb(241, 255, 254) );
+            padding-top: 0.5em;
+            
+            padding-bottom: 0.5em;
+
+            p{
+                color: rgb(70, 52, 52);
+            }
+
+            span{
+                font-size: 20px;
+                font-weight: 800;
+                color: rgb(92, 77, 58);
+            }
+
+        }
+
+        #tags{
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            text-align: center;
+            row-gap: 1em;
+
+            margin-top: 0em;
+
+            padding-bottom: 2em;
+
+
+            #h1-display{
+                
+                padding-top: 1em;
+                padding-bottom: 1em;
+                @include design;
+                font-size: 2.5em;
+            }
+            #h2-display{
+                margin-top: -1em;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                @include design;
+            }
+            #h3-display{
+                margin-top: -0.8em;
+                padding-top: 0.8em;
+                padding-bottom: 0.8em;
+                @include design;
+            }
+            #h4-display{
+                margin-top: -0.5em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                @include design;
+            }
+            #h5-display{
+                margin-top: -1em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                @include design;
+            }
+        }
+    }
+
+
+
+
+
+    @keyframes moveArrow {
+        from{
+            transform: translateY(-30px);
+        }
+        to{
+            transform: translateY(0px);
+
+        }
+    }
+}

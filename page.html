@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <p>TEST Heading Tags in html</p>
+    </header>
+
+    <section id="hero">
+        <div id="pre">
+            <p class="question">Wanna Visualize the heading tags of HTML?</p>
+            <p class="instruction-1">Type anything below!</p>
+        </div>
+        
+        <form action="">
+            <div class="input-box">
+                <input type="text" id="userInput" placeholder=".....">
+            </div>
+        </form>
+
+        <p class="instruction-2">Alright!</p>
+
+        <div id="post">
+            <p class="instruction-3">Now lets scroll down a bit</p>
+            <img src="images/down-arrow.png" alt="arrow pointing down">
+        </div>
+    </section>
+    <section class="display">
+        <div id="lines">
+            <p class="instruction-4">Go on! <br> <span>Click on the tag you wanna visualize your word(s) into!</span> </p>
+        </div>
+        <div id="tags">
+            <h1 id="h1-display" onclick="displayH1()"><p>h1</p></h1>
+
+            <h2 id="h2-display" onclick="displayH2()">h2</h2>
+
+            <h3 id="h3-display" onclick="displayH3()">h3</h3>
+
+            <h4 id="h4-display" onclick="displayH4()">h4</h4>
+
+            <h5 id="h5-display" onclick="displayH5()">h5</h5>
+        </div>
+    </section>
+    <script>
+        
+        function displayH1(){
+            var word = document.getElementById("userInput").value;
+            if (word=="") {
+                word = "for example";
+            }
+            document.getElementById("h1-display").innerHTML = word;
+            document.getElementById("h2-display").innerHTML = 'h2';
+            document.getElementById("h3-display").innerHTML = 'h3';
+            document.getElementById("h4-display").innerHTML = 'h4';
+            document.getElementById("h5-display").innerHTML = 'h5';
+        }
+
+        function displayH2(){
+            var word = document.getElementById("userInput").value;
+            if (word=="") {
+                word = "for example";
+            }
+            document.getElementById("h2-display").innerHTML = word;
+            document.getElementById("h3-display").innerHTML = 'h3';
+            document.getElementById("h4-display").innerHTML = 'h4';
+            document.getElementById("h5-display").innerHTML = 'h5';
+            document.getElementById("h1-display").innerHTML = 'h1';
+        }
+
+        function displayH3(){
+            var word = document.getElementById("userInput").value;
+            if (word=="") {
+                word = "for example";
+            }
+            document.getElementById("h3-display").innerHTML = word;
+            document.getElementById("h4-display").innerHTML = 'h4';
+            document.getElementById("h5-display").innerHTML = 'h5';
+            document.getElementById("h1-display").innerHTML = 'h1';
+            document.getElementById("h2-display").innerHTML = 'h2';
+        }
+
+        function displayH4(){
+            var word = document.getElementById("userInput").value;
+            if (word=="") {
+                word = "for example";
+            }
+            document.getElementById("h4-display").innerHTML = word;
+            document.getElementById("h5-display").innerHTML = 'h5';
+            document.getElementById("h1-display").innerHTML = 'h1';
+            document.getElementById("h2-display").innerHTML = 'h2';
+            document.getElementById("h3-display").innerHTML = 'h3';
+        }
+
+        function displayH5(){
+            var word = document.getElementById("userInput").value;
+            if (word=="") {
+                word = "for example";
+            }
+            document.getElementById("h5-display").innerHTML = word;
+            document.getElementById("h1-display").innerHTML = 'h1';
+            document.getElementById("h2-display").innerHTML = 'h2';
+            document.getElementById("h3-display").innerHTML = 'h3';
+            document.getElementById("h4-display").innerHTML = 'h4';
+        }
+    </script>
+
+</body>
+</html>
